@@ -23,7 +23,7 @@ client = Socrata("www.datos.gov.co", None)
 
 # First 2000 results, returned as JSON from API / converted to Python list of
 # dictionaries by sodapy.
-results = client.get("jbjy-vk9h", limit=10)#, where="nombre_entidad='MUNICIPIO DE PITALITO'")
+results = client.get("jbjy-vk9h", limit=5)#, where="nombre_entidad='MUNICIPIO DE PITALITO'")
 #results = client.get("jbjy-vk9h", limit=1000000)
 
 ## Get total number of rows
