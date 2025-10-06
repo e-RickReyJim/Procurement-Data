@@ -8,6 +8,7 @@ from sodapy import Socrata
 import os
 from datetime import datetime
 import time
+import openpyxl
 
 dataset_id = "jbjy-vk9h"
 #"jbjy-vk9h"
@@ -47,7 +48,7 @@ print(f"\nTotal records in dataset '{dataset_id}': {total_rows}")
 
 # --- Data Summary Section ---
 print("\n--- DATASET SUMMARY ---")
-sample_records = safe_get_record(client, dataset_id, limit=100, offset=0)
+sample_records = safe_get_record(client, dataset_id, limit=100, offset=1)
 
 excel_filename = f"summary_{dataset_id}_{today}.xlsx"
 if sample_records:

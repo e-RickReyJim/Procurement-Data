@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 
 # Load the JSON Lines file
 #df = pd.read_json('secop_download_09_11_2025.json', lines=True)
-df = pl.read_ndjson('secop_download_09_11_2025.json')
+df = pl.read_ndjson('test_jbjy-vk9h_10062025.json')
 
 # 1. Show the first few rows
 #print('First 5 rows:')
@@ -16,25 +16,25 @@ description = df.describe()
 print(description)
 
 # 3. Null values
-##null_counts = df.null_count()
-#print('\nNull values per column:')
-#print(null_counts)
+null_counts = df.null_count()
+print('\nNull values per column:')
+print(null_counts)
 
-print(df.glimpse(max_items_per_column=1))
-#rint("00")
-#f.cast({"fecha_de_fin_del_contrato": pl.Date}).dtypes
+#print(df.glimpse(max_items_per_column=1))
+print("00")
+#df.cast({"fecha_de_fin_del_contrato": pl.Date}).dtypes
 #f.cast({"fecha_de_fin_del_contrato": pl.Date})
-#fin = df.select(pl.col("fecha_de_fin_del_contrato"))
-#print(fin)
+fin = df.select(pl.col("fecha_de_fin_del_contrato"))
+print(fin)
 
-#f."fecha_de_fin_del_contrato"] = df["fecha_de_fin_del_contrato"].str.slice(0, 10)
+#df["fecha_de_fin_del_contrato"] = df["fecha_de_fin_del_contrato"].str.slice(0, 10)
 
-#riginal_date_time = "2020-08-15T00:00:00.000"
+#original_date_time = "2020-08-15T00:00:00.000"
 #ate_only = original_date_time.split('T')[0]
 #rint(date_only)
 
 
-#rint(df.glimpse(max_items_per_column=1))
+print(df.glimpse(max_items_per_column=1))
 ## 4. Show column names and count unique values per column
 #print('\nColumn names and unique value counts:')
 #for col in df.columns:
